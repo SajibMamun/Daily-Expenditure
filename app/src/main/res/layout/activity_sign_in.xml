@@ -71,7 +71,7 @@
             android:text="don't have an account? "
             />
         <TextView
-            android:id="@+id/SignInTv"
+            android:id="@+id/RegisterTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Register Here"
