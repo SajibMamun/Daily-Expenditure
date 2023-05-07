@@ -17,15 +17,6 @@
         android:textSize="30sp"
         android:textStyle="bold"/>
 
-    <EditText
-        android:id="@+id/usernameEt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="20dp"
-        android:hint="name"
-        android:inputType="textPersonName"/>
 
     <EditText
         android:id="@+id/useremailEt"
@@ -33,70 +24,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="50dp"
         android:layout_marginRight="20dp"
         android:hint="E-Mail" />
 
-    <EditText
-        android:id="@+id/usernumberEt"
-        android:inputType="phone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="20dp"
-        android:hint="Phone" />
 
-    <RadioGroup
-        android:id="@+id/GenderRadioGroup"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="20dp"
-        android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Gender" />
-
-        <RadioButton
-            android:id="@+id/malebtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Male" />
-
-        <RadioButton
-            android:id="@+id/femalebtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Female" />
-    </RadioGroup>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:weightSum="2"
-        android:orientation="horizontal"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="20dp"
-        >
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Join As"
-            />
-        <Spinner
-            android:id="@+id/spinnerid"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-          />
-
-    </LinearLayout>
 
 
     <EditText
@@ -109,25 +42,15 @@
         android:layout_marginRight="20dp"
         android:hint="Password" />
 
-    <EditText
-        android:inputType="textPassword"
-        android:id="@+id/ConfirmPasswordEt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="20dp"
-        android:hint="Confirm Password" />
-
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/Registerbtnid"
+        android:id="@+id/SignInbtnid"
         android:textColor="@color/white"
         android:backgroundTint="#009688"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Register Now"
+        android:text="Sign In"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="30dp"
         />
 
@@ -145,13 +68,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="already have an account? "
+            android:text="don't have an account? "
             />
         <TextView
             android:id="@+id/SignInTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sign In "
+            android:text="Register Here"
+            android:layout_marginLeft="20sp"
             android:textSize="20sp"
             android:textColor="#009688"
             />
