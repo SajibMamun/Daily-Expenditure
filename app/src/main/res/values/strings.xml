@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Daily Expenditure</string>
+    <string-array name="JoinAs">
+        <item>Student</item>
+        <item>Employee</item>
+        <item>Business Man</item>
+    </string-array>
 </resources>
