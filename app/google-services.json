@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "689219269688",
+    "project_id": "daily-expenditure-d8cf2",
+    "storage_bucket": "daily-expenditure-d8cf2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:689219269688:android:7748eeceb16822642922cd",
+        "android_client_info": {
+          "package_name": "com.learnwithsajib.dailyexpenditure"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "689219269688-84u091r9ptomv00k2p23bk9pojvskh6n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALAUbtDutgOhs0eGU8uNSNAbfX5XbOHiY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "689219269688-84u091r9ptomv00k2p23bk9pojvskh6n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
