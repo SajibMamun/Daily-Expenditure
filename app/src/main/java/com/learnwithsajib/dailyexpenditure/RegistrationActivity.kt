@@ -137,9 +137,35 @@ class RegistrationActivity : AppCompatActivity() {
 
 
     }
+
+    private fun RegisterAccount(name: String, phone: String, email: String, password: String, confirmpasss: String, gender: String?, joinas: String) {
+firebaseAuth.createUserWithEmailAndPassword(email,password)
+    .addOnCompleteListener{
+        if(it.isSuccessful)
+        {
+            firebaseUser=FirebaseAuth.getInstance().currentUser!!
+            uid=firebaseUser.uid
+
+            val map= mapOf("name" to name, "email" to email, "phone" to phone, "gender" to gender,"joinas" to joinas, "password" to password)
+
+            if(uid!=null)
+
+            {
+                myref.child(uid).setValue(map).addOnCompleteListener {
+                    if(it.isSuccessful)
+                    {
+                        Toast.makeText(applicationContext,"Register Successfully",Toast.LENGTH_SHORT).show()
+                    }
+                    else
+                    {
+                        Toast.makeText(applicationContext,"${it.exception}",Toast.LENGTH_SHORT).show()
+
+                    }
+                }
+            }
+        }
+    }
+    }
 }
 
-class RegisterAccount(name: String, phone: String, email: String, password: String, confirmpasss: String, gender: String?, joinas: String) {
 
-
-}
