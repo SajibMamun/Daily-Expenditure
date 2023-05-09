@@ -58,20 +58,21 @@ class RegistrationActivity : AppCompatActivity() {
             }
         }
 
-
-        firebaseAuth=FirebaseAuth.getInstance()
-
-        val database=Firebase.database
-        myref=database.reference.child("User")
-
         binding.malebtn.setOnClickListener {
             gender="Male"
             Toast.makeText(applicationContext,"$gender",Toast.LENGTH_SHORT).show()
         }
         binding.femalebtn.setOnClickListener {
             gender="Female"
-            Toast.makeText(applicationContext,"$gender",Toast.LENGTH_SHORT).show()
+
         }
+
+
+        firebaseAuth=FirebaseAuth.getInstance()
+
+        val database=Firebase.database
+        myref=database.reference.child("User")
+
 
 
 
@@ -83,7 +84,62 @@ class RegistrationActivity : AppCompatActivity() {
         }
 
 
+        binding.Registerbtnid.setOnClickListener {
+            val name:String=binding.usernameEt.text.toString()
+            val email:String=binding.useremailEt.text.toString()
+            val phone:String=binding.usernumberEt.text.toString()
+            val password:String=binding.PasswordEt.text.toString()
+            val confirmpasss:String=binding.ConfirmPasswordEt.text.toString()
+
+
+            if(name.isEmpty())
+            {
+                binding.usernameEt.error = "enter name"
+            }
+            else if(email.isEmpty())
+            {
+                binding.useremailEt.error="enter email"
+            }
+            else if(phone.isEmpty())
+            {
+                binding.usernumberEt.error="enter number"
+
+            }
+            else if(password.length<8 || password.isEmpty())
+            {
+                binding.PasswordEt.error="enter valid password"
+            }
+            else if(confirmpasss.length<8 )
+            {
+                binding.ConfirmPasswordEt.error="enter valid password"
+            }
+            else if(password != confirmpasss)
+            {
+                binding.ConfirmPasswordEt.error="password not match"
+            }
+
+            else if(joinas.equals(null)|| joinas=="")
+            {
+                Toast.makeText(applicationContext,"Select User Type",Toast.LENGTH_SHORT).show()
+            }
+            else if(gender.equals(null)|| joinas=="")
+            {
+                Toast.makeText(applicationContext,"choose gender",Toast.LENGTH_SHORT).show()
+            }
+            else
+            {
+                RegisterAccount(name,phone,email,password,confirmpasss,gender,joinas)
+            }
+
+        }
+
+
 
 
     }
+}
+
+class RegisterAccount(name: String, phone: String, email: String, password: String, confirmpasss: String, gender: String?, joinas: String) {
+
+
 }
